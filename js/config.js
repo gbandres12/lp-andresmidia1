@@ -28,11 +28,11 @@ const SITE = {
   /** PREENCHA AQUI os dois gestores de tráfego responsáveis pelos projetos. */
   gestores: [
     {
-      nome: "Nome do Gestor 01",
-      cargo: "Gestor de Tráfego",
-      especialidade: "Especialidade / projetos que comanda",
-      bio: "Breve descrição do gestor e dos projetos sob sua responsabilidade.",
-      foto: "",
+      nome: "Gabriel Andres",
+      cargo: "Gestor Estratégico",
+      especialidade: "Google Ads para médicos, telecom e outros",
+      bio: "+ de 1MM gerenciados, com ampla experiência em tráfego no Google para médicos, telecom e outros.",
+      foto: "img/gabriel-andres.png",
     },
     {
       nome: "Nome do Gestor 02",
