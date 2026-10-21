@@ -183,6 +183,24 @@ document.querySelector("#cnpj").textContent = SITE.cnpj;
 document.querySelector("#cidade-footer").textContent = SITE.cidade;
 document.querySelector("#ig-link").href = SITE.instagram;
 
+document.querySelectorAll(".hero-copy, .hero-photo, .hero-panel, .wide-photo, .ethics, .plan, .quote, .faq-item, .final-grid > div").forEach((node) => {
+  node.classList.add("reveal");
+});
+
+const motion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (!motion && "IntersectionObserver" in window) {
+  const seen = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-in");
+      seen.unobserve(entry.target);
+    });
+  }, { threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
+  document.querySelectorAll(".reveal").forEach((node) => seen.observe(node));
+} else {
+  document.querySelectorAll(".reveal").forEach((node) => node.classList.add("is-in"));
+}
+
 fillPrices();
 renderQuotes();
 bindWhatsAppClicks();

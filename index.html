@@ -18,6 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@450;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add("js")</script>
   <!-- Google Tag: troque G-XXXXXXXX e descomente
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
   <script>
@@ -52,33 +53,16 @@
   <main id="topo">
     <section class="hero">
       <div class="wrap hero-grid">
-        <div>
+        <div class="hero-copy">
           <p class="eyebrow">G L Andres Mídia e Tecnologia · Santarém/PA</p>
           <h1>Mais pacientes particulares na sua agenda, todo mês.</h1>
           <p class="hero-sub">Anúncios no Google e no Instagram feitos para clínicas e consultórios, com acompanhamento de perto.</p>
-          <a class="btn" data-wa="contato" href="#contato">Quero mais pacientes</a>
-          <p class="fine">Diagnóstico gratuito. Gestão só de tráfego pago: Google Ads e Meta Ads.</p>
+          <a class="btn" data-wa="contato" href="#">Quero mais pacientes</a>
+          <p class="fine">Abre o WhatsApp. Diagnóstico gratuito, só gestão de Google Ads e Meta Ads.</p>
         </div>
-        <div class="hero-panel" id="contato">
-          <h2>Fale com a gente</h2>
-          <p>Conte sobre a clínica. A conversa segue no WhatsApp.</p>
-          <form class="form" id="lead-form">
-            <label>Nome
-              <input name="nome" required autocomplete="name" maxlength="80">
-            </label>
-            <label>Clínica ou especialidade
-              <input name="clinica" required maxlength="120" placeholder="Dermatologia, clínica odontológica…">
-            </label>
-            <label>Cidade
-              <input name="cidade" required maxlength="80" autocomplete="address-level2">
-            </label>
-            <label>WhatsApp
-              <input name="whatsapp" required inputmode="tel" autocomplete="tel" maxlength="20" placeholder="(93) 99999-9999">
-            </label>
-            <button class="btn btn-block" type="submit">Quero mais pacientes</button>
-            <p class="form-note" id="form-note" role="status"></p>
-          </form>
-        </div>
+        <figure class="hero-photo">
+          <img src="img/clinica-recepcao.jpg" alt="Recepção clara de uma clínica particular, com cadeira vazia e luz da manhã." width="1152" height="864">
+        </figure>
       </div>
     </section>
 
@@ -87,17 +71,17 @@
         <p class="eyebrow">O que trava a agenda</p>
         <h2 id="dor-titulo">A clínica está pronta. A agenda, nem sempre.</h2>
         <div class="cards">
-          <article class="card">
+          <article class="card reveal">
             <div class="mark" aria-hidden="true">1</div>
             <h3>Agenda com horários vagos</h3>
             <p>Particular some no meio da semana e o horário fica parado, mesmo com equipe e sala disponíveis.</p>
           </article>
-          <article class="card">
+          <article class="card reveal">
             <div class="mark" aria-hidden="true">2</div>
             <h3>Depender só de indicação</h3>
             <p>Indicação é boa, mas oscila. Um mês cheio não garante o próximo.</p>
           </article>
-          <article class="card">
+          <article class="card reveal">
             <div class="mark" aria-hidden="true">3</div>
             <h3>Já impulsionou post e não viu retorno</h3>
             <p>Impulsionar um post não é campanha. Sem público certo e sem medir o WhatsApp, o dinheiro some.</p>
@@ -110,23 +94,26 @@
       <div class="wrap">
         <p class="eyebrow">Como funciona</p>
         <h2 id="como-titulo">Do diagnóstico ao paciente no WhatsApp.</h2>
+        <figure class="wide-photo">
+          <img src="img/agenda-whatsapp.jpg" alt="Celular e agenda em papel sobre uma mesa clara, prontos para um novo horário." width="1280" height="720">
+        </figure>
         <div class="steps">
-          <article class="step">
+          <article class="step reveal">
             <div class="step-n">01</div>
             <h3>Diagnóstico gratuito</h3>
             <p>Entendemos especialidade, cidade e o que a agenda precisa preencher.</p>
           </article>
-          <article class="step">
+          <article class="step reveal">
             <div class="step-n">02</div>
             <h3>Campanhas no Google e no Meta</h3>
             <p>Anúncios de busca e no Instagram, escritos para quem já procura aquele cuidado.</p>
           </article>
-          <article class="step">
+          <article class="step reveal">
             <div class="step-n">03</div>
             <h3>Pacientes chamando no WhatsApp</h3>
             <p>O contato chega na clínica. Quem responde e agenda é a sua equipe.</p>
           </article>
-          <article class="step">
+          <article class="step reveal">
             <div class="step-n">04</div>
             <h3>Relatório e otimização semanal</h3>
             <p>Ajustamos anúncio, público e verba toda semana, com clareza do que gerou conversa.</p>
@@ -138,14 +125,17 @@
     <section class="section" aria-labelledby="etica-titulo">
       <div class="wrap">
         <article class="ethics">
-          <p class="eyebrow">Ética médica</p>
-          <h2 id="etica-titulo">Anúncio dentro das regras do CFM.</h2>
-          <p class="lede">Publicidade de médico e clínica tem limite. A campanha já nasce dentro dele.</p>
-          <ul>
-            <li>Sem promessa de resultado.</li>
-            <li>Sem antes e depois.</li>
-            <li>Sem preço de consulta no anúncio.</li>
-          </ul>
+          <img class="ethics-photo" src="img/clinica-corredor.jpg" alt="Corredor silencioso de uma clínica, com porta entreaberta e luz quente." width="864" height="1152">
+          <div>
+            <p class="eyebrow">Ética médica</p>
+            <h2 id="etica-titulo">Anúncio dentro das regras do CFM.</h2>
+            <p class="lede">Publicidade de médico e clínica tem limite. A campanha já nasce dentro dele.</p>
+            <ul>
+              <li>Sem promessa de resultado.</li>
+              <li>Sem antes e depois.</li>
+              <li>Sem preço de consulta no anúncio.</li>
+            </ul>
+          </div>
         </article>
       </div>
     </section>
@@ -223,12 +213,34 @@
       </div>
     </section>
 
-    <section class="section final">
-      <div class="wrap">
-        <p class="eyebrow" style="color:#e6c86a">Próximo passo</p>
-        <h2>Sua agenda particular pode receber gente nova ainda este mês.</h2>
-        <p class="lede">Diagnóstico gratuito, sem compromisso de fechar. A conversa é no WhatsApp.</p>
-        <a class="btn" data-wa="contato" href="#">Quero mais pacientes</a>
+    <section class="section final" id="contato">
+      <div class="wrap final-grid">
+        <div>
+          <p class="eyebrow">Próximo passo</p>
+          <h2>Sua agenda particular pode receber gente nova ainda este mês.</h2>
+          <p class="lede">Se preferir falar agora, o botão abre o WhatsApp direto. Ou deixe seus dados e a mensagem já vai preenchida.</p>
+          <a class="btn" data-wa="contato" href="#">Ir para o WhatsApp</a>
+        </div>
+        <div class="hero-panel">
+          <h2>Fale com a gente</h2>
+          <p>Conte sobre a clínica. Ao enviar, o WhatsApp abre com a mensagem pronta.</p>
+          <form class="form" id="lead-form">
+            <label>Nome
+              <input name="nome" required autocomplete="name" maxlength="80">
+            </label>
+            <label>Clínica ou especialidade
+              <input name="clinica" required maxlength="120" placeholder="Dermatologia, clínica odontológica…">
+            </label>
+            <label>Cidade
+              <input name="cidade" required maxlength="80" autocomplete="address-level2">
+            </label>
+            <label>WhatsApp
+              <input name="whatsapp" required inputmode="tel" autocomplete="tel" maxlength="20" placeholder="(93) 99999-9999">
+            </label>
+            <button class="btn btn-block" type="submit">Enviar e abrir o WhatsApp</button>
+            <p class="form-note" id="form-note" role="status"></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>

@@ -135,6 +135,38 @@ h2,
   gap: 1.5rem;
 }
 
+.hero-photo,
+.wide-photo {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.hero-photo img,
+.wide-photo img,
+.ethics-photo {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transform: scale(1.06);
+  animation: drift 16s ease-in-out infinite alternate;
+}
+
+.wide-photo {
+  margin-bottom: 1.2rem;
+}
+
+.ethics {
+  display: grid;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.ethics-photo {
+  height: 220px;
+  border-radius: 16px;
+}
+
 .hero h1 {
   margin: 0 0 0.9rem;
   max-width: 11ch;
@@ -578,6 +610,62 @@ input {
   box-shadow: 0 12px 30px rgba(20, 16, 4, 0.22);
 }
 
+.js .reveal {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.reveal.is-in {
+  animation: rise 0.85s ease both;
+}
+
+.cards .card:nth-child(2),
+.steps .step:nth-child(2),
+.quotes .quote:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.cards .card:nth-child(3),
+.steps .step:nth-child(3),
+.quotes .quote:nth-child(3) {
+  animation-delay: 0.22s;
+}
+
+.steps .step:nth-child(4) {
+  animation-delay: 0.32s;
+}
+
+.plans .plan:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes drift {
+  from { transform: scale(1.06) translate3d(0, 0, 0); }
+  to { transform: scale(1.12) translate3d(0, -2.5%, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .hero-photo img,
+  .wide-photo img,
+  .ethics-photo {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .modal {
   position: fixed;
   inset: 0;
@@ -686,10 +774,27 @@ input {
     padding: 3.5rem 0 4rem;
   }
 
-  .hero-grid {
-    grid-template-columns: 1.15fr 0.85fr;
+  .hero-grid,
+  .final-grid {
+    grid-template-columns: 1.05fr 0.95fr;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem 2.5rem;
+  }
+
+  .hero-photo img,
+  .wide-photo img {
+    height: 320px;
+  }
+
+  .ethics {
+    grid-template-columns: 220px 1fr;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .ethics-photo {
+    height: 100%;
+    min-height: 240px;
   }
 
   .hero .btn,

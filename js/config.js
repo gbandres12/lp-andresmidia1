@@ -12,8 +12,8 @@ const SITE = {
   webhookUrl: "",
 
   precos: {
-    essencial: 1500,
-    crm: 2200,
+    essencial: 997,
+    crm: 1697,
     verbaAnuncio: 1500,
   },
 
