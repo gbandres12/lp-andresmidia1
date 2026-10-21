@@ -182,33 +182,18 @@ function bindPopup() {
 
   const desktop = window.matchMedia("(min-width: 900px) and (hover: hover)").matches;
   if (desktop) {
+    // Desktop: só dispara quando o mouse sai da página pelo topo.
     document.documentElement.addEventListener("mouseout", (event) => {
       if (event.clientY <= 0 && !event.relatedTarget) openPopup();
     });
     return;
   }
 
-  window.setTimeout(openPopup, 30000);
-  let lastY = window.scrollY;
-  let lastT = performance.now();
-  window.addEventListener(
-    "scroll",
-    () => {
-      const now = performance.now();
-      const y = window.scrollY;
-      const dt = now - lastT;
-      const dy = lastY - y;
-      if (dt > 0 && dt < 250 && dy > 90 && lastY > 240) openPopup();
-      lastY = y;
-      lastT = now;
-    },
-    { passive: true }
-  );
-  history.pushState({ andres: 1 }, "");
-  window.addEventListener("popstate", () => {
-    openPopup();
-    history.pushState({ andres: 1 }, "");
+  // Mobile: só dispara quando o usuário deixa a página (troca de aba/app ou fecha).
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") openPopup();
   });
+  window.addEventListener("pagehide", openPopup);
 }
 
 document.querySelector("#cnpj").textContent = SITE.cnpj;
