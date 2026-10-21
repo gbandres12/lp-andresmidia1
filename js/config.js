@@ -17,6 +17,24 @@ const SITE = {
     verbaAnuncio: 1500,
   },
 
+  /** PREENCHA AQUI os dois gestores de tráfego responsáveis pelos projetos. */
+  gestores: [
+    {
+      nome: "Nome do Gestor 01",
+      cargo: "Gestor de Tráfego",
+      especialidade: "Especialidade / projetos que comanda",
+      bio: "Breve descrição do gestor e dos projetos sob sua responsabilidade.",
+      foto: "",
+    },
+    {
+      nome: "Nome do Gestor 02",
+      cargo: "Gestor de Tráfego",
+      especialidade: "Especialidade / projetos que comanda",
+      bio: "Breve descrição do gestor e dos projetos sob sua responsabilidade.",
+      foto: "",
+    },
+  ],
+
   depoimentos: [
     {
       texto: "Em poucas semanas a agenda de particulares ficou mais preenchida. O relatório semanal deixa claro o que está funcionando.",

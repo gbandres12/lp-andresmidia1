@@ -51,6 +51,30 @@ function fillPrices() {
   document.querySelector("[data-off='crm-new']").textContent = brl(discount(SITE.precos.crm));
 }
 
+function renderGestores() {
+  const root = document.querySelector("#gestores");
+  if (!root) return;
+  root.innerHTML = SITE.gestores
+    .map((g) => {
+      const photo = g.foto
+        ? `<img src="${g.foto}" alt="${g.nome}" loading="lazy">`
+        : `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-4 0-8 2-8 5v1h16v-1c0-3-4-5-8-5z"/></svg>`;
+      const spec = g.especialidade ? `<p class="gestor-spec">${g.especialidade}</p>` : "";
+      const bio = g.bio ? `<p class="gestor-bio">${g.bio}</p>` : "";
+      return `
+      <article class="gestor">
+        <div class="gestor-photo">${photo}</div>
+        <div class="gestor-info">
+          <h3>${g.nome}</h3>
+          <p class="gestor-role">${g.cargo}</p>
+          ${spec}
+          ${bio}
+        </div>
+      </article>`;
+    })
+    .join("");
+}
+
 function renderQuotes() {
   const root = document.querySelector("#depoimentos");
   root.innerHTML = SITE.depoimentos
@@ -201,6 +225,7 @@ if (!motion && "IntersectionObserver" in window) {
   document.querySelectorAll(".reveal").forEach((node) => node.classList.add("is-in"));
 }
 
+renderGestores();
 fillPrices();
 renderQuotes();
 bindWhatsAppClicks();
