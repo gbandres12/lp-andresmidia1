@@ -51,6 +51,14 @@ function fillPrices() {
   document.querySelector("[data-off='crm-new']").textContent = brl(discount(SITE.precos.crm));
 }
 
+function renderTicker() {
+  const root = document.querySelector("#ticker");
+  if (!root) return;
+  const items = SITE.ticker.map((t) => `<span>${t}</span>`).join("");
+  // duplica o conteúdo para um loop contínuo e sem emenda
+  root.innerHTML = items + items;
+}
+
 function renderGestores() {
   const root = document.querySelector("#gestores");
   if (!root) return;
@@ -225,6 +233,7 @@ if (!motion && "IntersectionObserver" in window) {
   document.querySelectorAll(".reveal").forEach((node) => node.classList.add("is-in"));
 }
 
+renderTicker();
 renderGestores();
 fillPrices();
 renderQuotes();

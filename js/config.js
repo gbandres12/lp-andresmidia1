@@ -8,6 +8,14 @@ const SITE = {
   cnpj: "00.000.000/0001-00",
   cidade: "Santarém/PA",
 
+  /** Mensagens que passam na faixa de destaque no topo da página. */
+  ticker: [
+    "Diagnóstico gratuito",
+    "Anúncios no Google e Meta Ads",
+    "Dentro das regras do CFM",
+    "Vagas limitadas este mês",
+  ],
+
   /** URL do Google Apps Script (web app). Deixe "" para não enviar. */
   webhookUrl: "",
 
