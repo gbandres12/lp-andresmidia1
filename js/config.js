@@ -35,11 +35,11 @@ const SITE = {
       foto: "img/gabriel-andres.png",
     },
     {
-      nome: "Nome do Gestor 02",
+      nome: "João Alex",
       cargo: "Gestor de Tráfego",
-      especialidade: "Especialidade / projetos que comanda",
-      bio: "Breve descrição do gestor e dos projetos sob sua responsabilidade.",
-      foto: "",
+      especialidade: "Tráfego pago e automação com IA",
+      bio: "+ de 6 anos de experiência e + de R$ 3 milhões em verba gerenciada para 30+ clientes em agro, alimentos, arquitetura e construção. Domino Meta Ads e Google Ads — da estrutura de campanhas e testes de criativos à segmentação e otimização, com análise de dados no GA4 para decidir onde cada real rende mais. Construo automações com n8n, OpenAI e Evolution API, incluindo SDR e atendimento com IA no WhatsApp, além de funis e CRM integrados com Supabase/PostgreSQL e otimização do Perfil da Empresa no Google para negócios locais.",
+      foto: "img/joao-alex.png",
     },
   ],
 
