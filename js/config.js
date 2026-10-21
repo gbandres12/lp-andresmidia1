@@ -8,6 +8,14 @@ const SITE = {
   cnpj: "00.000.000/0001-00",
   cidade: "Santarém/PA",
 
+  /** Mensagens que passam na faixa de destaque no topo da página. */
+  ticker: [
+    "Diagnóstico gratuito",
+    "Anúncios no Google e Meta Ads",
+    "Dentro das regras do CFM",
+    "Vagas limitadas este mês",
+  ],
+
   /** URL do Google Apps Script (web app). Deixe "" para não enviar. */
   webhookUrl: "",
 
@@ -16,6 +24,24 @@ const SITE = {
     crm: 1697,
     verbaAnuncio: 1500,
   },
+
+  /** PREENCHA AQUI os dois gestores de tráfego responsáveis pelos projetos. */
+  gestores: [
+    {
+      nome: "Gabriel Andres",
+      cargo: "Gestor Estratégico",
+      especialidade: "Google Ads para médicos, telecom e outros",
+      bio: "+ de 1MM gerenciados, com ampla experiência em tráfego no Google para médicos, telecom e outros.",
+      foto: "img/gabriel-andres.png",
+    },
+    {
+      nome: "João Alex",
+      cargo: "Gestor de Tráfego",
+      especialidade: "Tráfego pago e automação com IA",
+      bio: "+ de 6 anos de experiência e + de R$ 3 milhões em verba gerenciada para 30+ clientes em agro, alimentos, arquitetura e construção. Domino Meta Ads e Google Ads — da estrutura de campanhas e testes de criativos à segmentação e otimização, com análise de dados no GA4 para decidir onde cada real rende mais. Construo automações com n8n, OpenAI e Evolution API, incluindo SDR e atendimento com IA no WhatsApp, além de funis e CRM integrados com Supabase/PostgreSQL e otimização do Perfil da Empresa no Google para negócios locais.",
+      foto: "img/joao-alex.png",
+    },
+  ],
 
   depoimentos: [
     {

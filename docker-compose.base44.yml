@@ -1,0 +1,34 @@
+# Base44 sandbox environment for the Andres Midia landing page.
+#
+# The site is a plain static bundle (index.html + css/ + js/ + img/), so it needs
+# no build step and no database. The source directory is bind-mounted into a plain
+# Node runtime and served by a live-reloading static dev server, so edits to HTML,
+# CSS and JS show up in the preview without a rebuild.
+services:
+  web:
+    image: node:22-alpine
+    working_dir: /app
+    # --host=0.0.0.0 so the preview proxy can reach it from outside the container.
+    command:
+      - sh
+      - -ec
+      - exec npx --yes live-server@1.2.2 --port=3000 --host=0.0.0.0 --no-browser --wait=200 .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app
+    environment:
+      - BASE44_PREVIEW_MODE
+      # Vite-style host allowlist is not needed here: live-server does not check
+      # Host/Origin headers, so the preview proxy hostname is accepted as-is.
+    restart: on-failure
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:3000/ || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 60s
+    labels:
+      base44.project: "Landing Page"
+      base44.kind: "web"
+      base44.port: "3000"
